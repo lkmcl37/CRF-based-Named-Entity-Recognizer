@@ -1,4 +1,5 @@
 #Introduction
+
 This project implements a CRF-based named entity recognizer. It uses the CRFSuite library as its basis. It’s able to handle 13 kinds of labels for PER, LOC and ORG. The implementation achieved the best F1 score of 0.81 on test set (trained on 2,000 sentences). 
 
 #Requirements
@@ -10,6 +11,7 @@ This project implements a CRF-based named entity recognizer. It uses the CRFSuit
 6. nltk (used for stopword list)
 
 #Used features
+
 The CRF named-entity recognizer uses the following features:
  
 Unigram Features - window: wi-2, wi-1, wi, wi+1
@@ -33,6 +35,7 @@ Bigram Features - window: [wi-2, wi-1], [wi-1, wi], [wi, wi+1]
 3. Whether the word starts with an uppercase letter.
 
 #Usage
+
 Use the following command to extract features from the data file: 
     $ python feature_extractor.py [INPUT] [OUTPUT]
 
