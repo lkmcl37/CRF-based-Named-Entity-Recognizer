@@ -1,8 +1,8 @@
-#Introduction
+# Introduction
 
 This project implements a CRF-based named entity recognizer. It uses the CRFSuite library as its basis. It’s able to handle 13 kinds of labels for PER, LOC and ORG. The implementation achieved the best F1 score of 0.81 on test set (trained on 2,000 sentences). 
 
-#Requirements
+# Requirements
 1. python 3.x
 2. CRFsuite 0.12 (https://github.com/chokkan/crfsuite)
 3. LibLBFGS (must have for crfsuite)
@@ -10,7 +10,7 @@ This project implements a CRF-based named entity recognizer. It uses the CRFSuit
 5. gensim (for the LDA, optional)
 6. nltk (used for stopword list)
 
-#Used features
+# Used features
 
 The CRF named-entity recognizer uses the following features:
  
@@ -34,12 +34,14 @@ Bigram Features - window: [wi-2, wi-1], [wi-1, wi], [wi, wi+1]
 2. The Part of Speech tag of the word.
 3. Whether the word starts with an uppercase letter.
 
-#Usage
+# Usage
 
 Use the following command to extract features from the data file: 
+    
     $ python feature_extractor.py [INPUT] [OUTPUT]
 
 For example, process a original data file train.gold and output it to train_feature.txt
+    
     $ python feature_extractor.py train.gold train_feature.txt
 
 Once you've obtained the feature files, you can just follow the training and tagging steps in CRFsuite.
